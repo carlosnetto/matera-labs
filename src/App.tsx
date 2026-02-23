@@ -10,7 +10,6 @@ import {
   Cpu, 
   Globe, 
   Zap, 
-  ArrowRight, 
   Lock, 
   Code2, 
   Rocket,
@@ -72,15 +71,6 @@ export default function App() {
               We explore new technologies to keep Matera on the edge of innovation.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20">
-                Explore Experiments
-                <ArrowRight className="w-4 h-4" />
-              </button>
-              <button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-slate-700 font-semibold rounded-xl border border-slate-200 hover:bg-slate-50 transition-all">
-                Submit Idea
-              </button>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -155,9 +145,9 @@ export default function App() {
       <section id="experiments" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Current Experiments</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">What We're Working On</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Explore the projects currently in development within the lab.
+              Matera products and the lab experiments expanding their ecosystem.
             </p>
           </div>
 
@@ -190,11 +180,11 @@ export default function App() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Digital Twin</h3>
               <p className="text-slate-600 mb-4 text-sm">
-                Make your legacy DDA realtime without replacing it. The world is realtime (RTP, FedNow, Stablecoins), your users are real time and your bank should offer a real time experience - not replacing the core banking.
+                Make your legacy DDA realtime without replacing it. The world is realtime (RTP, FedNow, Stablecoins) — your bank should offer a realtime experience without replacing the core banking. Lab experiments: core banking connectors and real-time sync adapters.
               </p>
               <div className="flex items-center gap-2 text-xs font-medium text-indigo-600">
-                <span className="px-2 py-1 bg-indigo-50 rounded-md">Performance</span>
-                <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded-md">Core</span>
+                <span className="px-2 py-1 bg-indigo-50 rounded-md">Matera Product</span>
+                <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded-md">Real-Time</span>
               </div>
             </motion.div>
 
@@ -208,10 +198,10 @@ export default function App() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Stablecoin Privacy</h3>
               <p className="text-slate-600 mb-4 text-sm">
-                Digital Twin for stablecoin balance control, ensuring client privacy and secure off-chain management.
+                Digital Twin for stablecoin balance control, ensuring client privacy and secure off-chain management. Lab experiments: crypto provider connectors and on/off-ramp integrations.
               </p>
               <div className="flex items-center gap-2 text-xs font-medium text-emerald-600">
-                <span className="px-2 py-1 bg-emerald-50 rounded-md">Privacy</span>
+                <span className="px-2 py-1 bg-emerald-50 rounded-md">Matera Product</span>
                 <span className="px-2 py-1 bg-slate-100 text-slate-600 rounded-md">Crypto</span>
               </div>
             </motion.div>
@@ -239,7 +229,7 @@ export default function App() {
               <span>Secure Internal Environment</span>
             </div>
           </div>
-          <p className="text-center text-[10px] text-slate-600 mt-4">Version 2026-02-23-17-49</p>
+          <p className="text-center text-[10px] text-slate-600 mt-4">Version 2026-02-23-17-54</p>
         </div>
       </footer>
     </div>
