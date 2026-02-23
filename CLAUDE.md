@@ -19,6 +19,7 @@ src/
   index.css     — Tailwind imports
 index.html      — HTML template
 vite.config.ts  — Vite config (aliases @ to project root)
+wrangler.toml   — Cloudflare Workers config (project name, account ID, assets)
 metadata.json   — app metadata (name, description)
 ```
 
@@ -28,18 +29,29 @@ metadata.json   — app metadata (name, description)
 npm run dev       # Dev server on port 3000
 npm run build     # Production build to dist/
 npm run preview   # Preview production build
-npm run deploy    # Build + deploy to Cloudflare Pages
+npm run deploy    # Build + deploy to Cloudflare Workers
 npm run lint      # TypeScript type-check (tsc --noEmit)
 npm run clean     # Remove dist/
 ```
 
 ## Deployment
 
-Deployed to **Cloudflare Pages** via Wrangler. The `deploy` script builds and pushes to the `small-king-da11` project.
+Deployed to **Cloudflare Workers** (project `royal-bar-87c8`) on the `tic.cloud@matera.com` account. Config lives in `wrangler.toml`.
+
+- **Domain**: materalabs.us (custom domain configured in Cloudflare Workers settings)
+- **Workers URL**: royal-bar-87c8.tic-cloud.workers.dev
+- `npm run deploy` builds with Vite then runs `wrangler deploy` which uploads static assets
+
+## Version Workflow
+
+A version string is displayed in the footer of the page in small text. Format: `Version YYYY-MM-DD-HH-MM`.
+
+When deploying, update the version in `src/App.tsx` (search for "Version 2026-") to the current date and time before running `npm run deploy`.
 
 ## Key Details
 
 - The entire UI is a single React component in `src/App.tsx` — no routing, no state management
 - Static landing page with no backend API calls
+- Digital Twin and Stablecoin Privacy are **Matera products**, not experiments — the experiments are the connectors and integrations around them
 - `express` and `better-sqlite3` are installed but unused — leftover from the AI Studio template
 - The `@` alias in imports resolves to the project root
