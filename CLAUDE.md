@@ -44,9 +44,9 @@ Deployed to **Cloudflare Workers** (project `royal-bar-87c8`) on the `tic.cloud@
 
 ## Version Workflow
 
-A version string is displayed in the footer of the page in small text. Format: `Version YYYY-MM-DD-HH-MM`.
+A version string is displayed in the footer of the page in small text. Format: `Version YYYY-MM-DD-HH-MM` in **UTC**.
 
-When deploying, update the version in `src/App.tsx` (search for "Version 2026-") to the current date and time before running `npm run deploy`.
+**Before every commit**, update the version in `src/App.tsx` (search for "Version 2026-") to the current UTC timestamp. This must happen as part of the staged changes — never commit without updating the version first.
 
 ## Key Details
 
