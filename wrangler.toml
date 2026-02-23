@@ -1,0 +1,6 @@
+name = "royal-bar-87c8"
+account_id = "45281eba1857e04d45fe46d31bdc2f0b"
+compatibility_date = "2026-02-23"
+
+[assets]
+directory = "./dist"

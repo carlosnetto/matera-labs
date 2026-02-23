@@ -239,6 +239,7 @@ export default function App() {
               <span>Secure Internal Environment</span>
             </div>
           </div>
+          <p className="text-center text-[10px] text-slate-600 mt-4">Version 2026-02-23-17-49</p>
         </div>
       </footer>
     </div>

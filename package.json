@@ -7,12 +7,11 @@
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && CLOUDFLARE_ACCOUNT_ID=b57de325eb89f1948551f4cada6d40c3 wrangler pages deploy dist --project-name=small-king-da11 --commit-dirty=true",
+    "deploy": "vite build && wrangler deploy",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "@google/genai": "^1.29.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
     "better-sqlite3": "^12.4.1",
