@@ -4,7 +4,8 @@ Internal innovation hub landing page for Matera — showcases fintech experiment
 
 ## Tech Stack
 
-- **React 19** + **TypeScript 5.8** — single-page app in `src/App.tsx`
+- **React 19** + **TypeScript 5.8** — multi-page app with React Router
+- **React Router DOM 6** — client-side routing
 - **Vite 6** — dev server and build tool
 - **Tailwind CSS 4** — styling (via `@tailwindcss/vite` plugin)
 - **Motion** (Framer Motion) — animations
@@ -14,13 +15,18 @@ Internal innovation hub landing page for Matera — showcases fintech experiment
 
 ```
 src/
-  App.tsx       — entire app (single component, landing page)
-  main.tsx      — React entry point
-  index.css     — Tailwind imports
-index.html      — HTML template
-vite.config.ts  — Vite config (aliases @ to project root)
-wrangler.toml   — Cloudflare Workers config (project name, account ID, assets)
-metadata.json   — app metadata (name, description)
+  App.tsx           — router, layout (nav + footer), shared shell
+  main.tsx          — React entry point
+  index.css         — Tailwind imports
+  pages/
+    Home.tsx        — landing page (/)
+    StablecoinPrivacy.tsx — Stablecoin Privacy product page (/stablecoin-privacy)
+public/
+  digital-twin-architecture.png — architecture diagram asset
+index.html          — HTML template
+vite.config.ts      — Vite config (aliases @ to project root)
+wrangler.toml       — Cloudflare Workers config (project name, account ID, assets)
+metadata.json       — app metadata (name, description)
 ```
 
 ## Commands
@@ -50,8 +56,9 @@ A version string is displayed in the footer of the page in small text. Format: `
 
 ## Key Details
 
-- The entire UI is a single React component in `src/App.tsx` — no routing, no state management
-- Static landing page with no backend API calls
+- `src/App.tsx` is the shared layout shell (nav + footer) and router — page content lives in `src/pages/`
+- Routes: `/` (Home), `/stablecoin-privacy` (StablecoinPrivacy)
+- No backend API calls — fully static
 - Digital Twin and Stablecoin Privacy are **Matera products**, not experiments — the experiments are the connectors and integrations around them
 - `express` and `better-sqlite3` are installed but unused — leftover from the AI Studio template
 - The `@` alias in imports resolves to the project root
